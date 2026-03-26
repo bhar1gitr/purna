@@ -1,9 +1,23 @@
 
+// import axios from 'axios';
+
+// export const BASE_URL = 'http://192.168.1.14:3000/api'; 
+// // export const BASE_URL = 'https://purna-server.onrender.com/api';
+// // const BASE_URL = 'https://purna-full.onrender.com/api'; 
+
+// const API = axios.create({
+//   baseURL: BASE_URL,
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// });
+
+// export default API; 
+
+// Client/services/api.ts
 import axios from 'axios';
 
-export const BASE_URL = 'http://192.168.1.14:3000/api'; 
-// export const BASE_URL = 'https://purna-server.onrender.com/api';
-// const BASE_URL = 'https://purna-full.onrender.com/api'; 
+export const BASE_URL = process.env.EXPO_PUBLIC_API_URL; // This matches the Factory injection!
 
 const API = axios.create({
   baseURL: BASE_URL,
