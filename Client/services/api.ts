@@ -17,7 +17,9 @@
 // Client/services/api.ts
 import axios from 'axios';
 
-export const BASE_URL = process.env.EXPO_PUBLIC_API_URL; // This matches the Factory injection!
+// This pulls directly from the .env file
+export const BASE_URL = process.env.EXPO_PUBLIC_API_URL;
+
 
 const API = axios.create({
   baseURL: BASE_URL,
@@ -26,4 +28,4 @@ const API = axios.create({
   },
 });
 
-export default API; 
+export default API;
