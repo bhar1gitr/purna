@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config(); // Loads the variables
 
 // Add this line to check if it worked
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // DB
 const db = require('./conn/db');
